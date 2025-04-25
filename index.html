@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list
+    </title>
+   <script src="script.js" defer></script>
+   
+   <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f0f; /* Jet Black */
+      color: #f2f2f2;
+      padding: 30px;
+    }
+  
+    #list {
+      margin-bottom: 20px;
+    }
+  
+    .list-item, .class-list {
+      background-color: #1a1a1a; /* Deep dark */
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); /* red glow */
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 0.5s ease;
+      border-left: 4px solid #8b0000; /* dark red bar */
+    }
+  
+    .list-item:hover {
+      background-color: #2a0000; /* dark red hover */
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+  
+    form {
+      margin-top: 30px;
+    }
+  
+    input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      width: 200px;
+      background-color: #1f1f1f;
+      color: #fff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    }
+    .title-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.title-box {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid red;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 15px red, 0 0 30px darkred;
+  border-radius: 6px;
+  background-color: #111;
+}
+
+
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      background-color: #8b0000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button:hover {
+      background-color: #a30000;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+    }
+  </style>
+  
+</head>
+<body>
+
+    <div class="title-wrapper">
+        <div class="title-box">TO DO LIST</div>
+      </div>
+      
+
+     <div id="list">
+        <div class="class-list"> Example :- Read Books At least 1hr</div>
+     </div>
+
+
+
+    <form id="new-item">
+        <label for="Items">Add Items</label>
+        <input type="text" id="Items">
+        <button type="submit"> add Items</button>
+
+    </form>
+    
+</body>
+</html>
